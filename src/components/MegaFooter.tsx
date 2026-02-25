@@ -28,7 +28,7 @@ const MegaFooter = () => {
   return (
     <footer className="bg-foreground text-primary-foreground">
       {/* Main footer content */}
-      <div className="min-h-screen flex flex-col justify-between">
+      <div className="h-screen flex flex-col justify-between">
         <div className="section-padding">
           <div className="container-narrow">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16">

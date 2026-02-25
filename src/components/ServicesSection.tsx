@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import {
   Code2,
   Globe,
@@ -5,52 +6,18 @@ import {
   Wrench,
   HardDrive,
   Network,
+  ArrowRight,
 } from "lucide-react";
+import { servicesData } from "@/data/servicesData";
+
+const iconMap: Record<string, React.ElementType> = {
+  Code2, Globe, Monitor, Wrench, HardDrive, Network,
+};
 
 /**
- * ServicesSection — Material-style grid of 6 core service cards.
- * Uses flat design with clean icons and generous spacing.
+ * ServicesSection — Material-style grid of 6 core service cards on the home page.
+ * Links to individual service pages.
  */
-
-const services = [
-  {
-    icon: Code2,
-    title: "Software Development",
-    description:
-      "Custom software solutions tailored to your business needs. From web apps to enterprise systems, we build scalable software that drives growth.",
-  },
-  {
-    icon: Globe,
-    title: "Websites",
-    description:
-      "Professional, responsive websites designed to convert visitors into customers. SEO-optimized and blazing fast across all devices.",
-  },
-  {
-    icon: Monitor,
-    title: "IT Supplies",
-    description:
-      "Quality hardware, peripherals, and IT equipment sourced from trusted global brands. Competitive pricing with reliable delivery across Kenya.",
-  },
-  {
-    icon: Wrench,
-    title: "IT Maintenance",
-    description:
-      "Proactive IT maintenance and support to keep your systems running at peak performance. Minimize downtime with our expert managed services.",
-  },
-  {
-    icon: HardDrive,
-    title: "Backup & Recovery",
-    description:
-      "Enterprise-grade backup solutions and disaster recovery plans. Protect your critical business data with automated, secure backups.",
-  },
-  {
-    icon: Network,
-    title: "Networking",
-    description:
-      "End-to-end networking solutions including LAN/WAN setup, Wi-Fi optimization, VPN configuration, and network security for businesses of all sizes.",
-  },
-];
-
 const ServicesSection = () => {
   return (
     <section id="services" className="section-padding bg-muted">
@@ -69,27 +36,31 @@ const ServicesSection = () => {
 
         {/* Services grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <div
-              key={service.title}
-              className="mat-card group"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              {/* Icon */}
-              <div className="w-12 h-12 bg-primary/10 rounded flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
-                <service.icon
-                  size={24}
-                  className="text-primary group-hover:text-primary-foreground transition-colors"
-                />
-              </div>
-
-              {/* Content */}
-              <h3 className="text-lg font-semibold mb-3">{service.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                {service.description}
-              </p>
-            </div>
-          ))}
+          {servicesData.map((service, index) => {
+            const Icon = iconMap[service.icon] || Code2;
+            return (
+              <Link
+                key={service.slug}
+                to={`/services/${service.slug}`}
+                className="mat-card group block text-center"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <div className="w-12 h-12 bg-primary/10 rounded flex items-center justify-center mx-auto mb-6 group-hover:bg-primary transition-colors">
+                  <Icon
+                    size={24}
+                    className="text-primary group-hover:text-primary-foreground transition-colors"
+                  />
+                </div>
+                <h3 className="text-lg font-semibold mb-3">{service.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                  {service.shortDescription}
+                </p>
+                <span className="inline-flex items-center gap-2 text-sm font-semibold text-primary uppercase tracking-wider">
+                  Learn More <ArrowRight size={16} />
+                </span>
+              </Link>
+            );
+          })}
         </div>
       </div>
     </section>
