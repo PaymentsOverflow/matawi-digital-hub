@@ -1,0 +1,61 @@
+import { Link } from "react-router-dom";
+
+/**
+ * HeroSection — Bold, clean hero with a strong value proposition.
+ * Flat Material design with generous whitespace.
+ */
+const HeroSection = () => {
+  return (
+    <section className="section-padding bg-background">
+      <div className="container-narrow">
+        <div className="max-w-3xl space-y-8 animate-fade-in-up">
+          {/* Eyebrow */}
+          <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-secondary">
+            IT Infrastructure &amp; Digital Solutions
+          </span>
+
+          {/* Headline */}
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
+            Transform Your Business With{" "}
+            <span className="text-primary">Modern Technology</span>
+          </h1>
+
+          {/* Subheadline */}
+          <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl">
+            Matawi Digital delivers end-to-end IT infrastructure, software development, 
+            and digital marketing solutions for businesses across Kenya. From Nairobi to 
+            country-wide — we build the technology backbone your business needs to thrive.
+          </p>
+
+          {/* CTA buttons */}
+          <div className="flex flex-wrap gap-4 pt-4">
+            <Link to="/contact" className="btn-primary">
+              Get Started
+            </Link>
+            <Link to="/#services" className="btn-outline-primary">
+              Our Services
+            </Link>
+          </div>
+
+          {/* Trust indicators */}
+          <div className="flex flex-wrap gap-8 pt-8 border-t border-border">
+            <div>
+              <p className="text-2xl font-bold text-primary">100+</p>
+              <p className="text-xs text-muted-foreground uppercase tracking-wider">Clients Served</p>
+            </div>
+            <div>
+              <p className="text-2xl font-bold text-primary">6+</p>
+              <p className="text-xs text-muted-foreground uppercase tracking-wider">Core Services</p>
+            </div>
+            <div>
+              <p className="text-2xl font-bold text-primary">Kenya</p>
+              <p className="text-xs text-muted-foreground uppercase tracking-wider">Country-wide</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default HeroSection;
