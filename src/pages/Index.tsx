@@ -2,11 +2,12 @@ import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
+import BrandsSection from "@/components/BrandsSection";
 import MegaFooter from "@/components/MegaFooter";
+import AnnouncementBar from "@/components/AnnouncementBar";
 
 /**
  * Home Page — Main landing page for Matawi Digital.
- * Includes hero, services, and mega footer with full SEO metadata.
  */
 const Index = () => {
   return (
@@ -37,9 +38,7 @@ const Index = () => {
               addressRegion: "Nairobi",
               addressCountry: "KE",
             },
-            areaServed: [
-              "Ngong", "Nairobi", "Karen", "Thika", "Machakos", "Kitengela", "Kenya"
-            ],
+            areaServed: ["Ngong", "Nairobi", "Karen", "Thika", "Machakos", "Kitengela", "Kenya"],
             serviceType: [
               "Software Development", "Website Design", "IT Supplies",
               "IT Maintenance", "Backup and Recovery", "Networking"
@@ -48,10 +47,12 @@ const Index = () => {
         </script>
       </Helmet>
 
+      <AnnouncementBar />
       <Header />
       <main>
         <HeroSection />
         <ServicesSection />
+        <BrandsSection />
       </main>
       <MegaFooter />
     </>

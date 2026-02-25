@@ -10,7 +10,7 @@ import logo from "@/assets/matawi-logo.png";
 
 const navLinks = [
   { label: "Home", path: "/" },
-  { label: "Services", path: "/#services" },
+  { label: "Services", path: "/services" },
   { label: "About", path: "/about" },
   { label: "Blog", path: "/blog" },
   { label: "Contact", path: "/contact" },
