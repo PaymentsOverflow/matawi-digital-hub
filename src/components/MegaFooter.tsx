@@ -28,7 +28,7 @@ const MegaFooter = () => {
   return (
     <footer className="bg-foreground text-primary-foreground">
       {/* Main footer content */}
-      <div className="h-screen flex flex-col justify-between">
+      <div className="min-h-screen flex flex-col justify-between">
         <div className="section-padding">
           <div className="container-narrow">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16">
@@ -42,8 +42,8 @@ const MegaFooter = () => {
                 </p>
               </div>
 
-              {/* Column 2: Quick Links */}
-              <div className="space-y-6">
+              {/* Column 2: Quick Links - hidden on mobile */}
+              <div className="hidden md:block space-y-6">
                 <h3 className="text-lg font-semibold uppercase tracking-wider">Services</h3>
                 <ul className="space-y-3">
                   {quickLinks.map((link) => (
@@ -59,8 +59,8 @@ const MegaFooter = () => {
                 </ul>
               </div>
 
-              {/* Column 3: Company */}
-              <div className="space-y-6">
+              {/* Column 3: Company - hidden on mobile */}
+              <div className="hidden md:block space-y-6">
                 <h3 className="text-lg font-semibold uppercase tracking-wider">Company</h3>
                 <ul className="space-y-3">
                   {companyLinks.map((link) => (
@@ -130,8 +130,8 @@ const MegaFooter = () => {
               © 2022 - {new Date().getFullYear()} Matawi Digital. All rights reserved.
             </p>
             <div className="flex gap-6">
-              <Link to="/about" className="text-xs opacity-40 hover:opacity-70 transition-opacity">Privacy Policy</Link>
-              <Link to="/about" className="text-xs opacity-40 hover:opacity-70 transition-opacity">Terms of Service</Link>
+              <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-xs opacity-40 hover:opacity-70 transition-opacity">Google Privacy Policy</a>
+              <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="text-xs opacity-40 hover:opacity-70 transition-opacity">Google Terms of Service</a>
             </div>
           </div>
         </div>
