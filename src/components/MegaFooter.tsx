@@ -34,7 +34,7 @@ const MegaFooter = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16">
               {/* Column 1: Company Info */}
               <div className="space-y-6">
-                <img src={logo} alt="Matawi Digital" className="h-10 w-auto brightness-200" />
+                <img src={logo} alt="Matawi Digital" className="h-10 w-auto brightness-100" />
                 <p className="text-sm leading-relaxed opacity-70">
                   Matawi Digital is a leading IT infrastructure, management, and marketing company 
                   headquartered in Kenya. We deliver world-class technology solutions to businesses 
@@ -74,21 +74,6 @@ const MegaFooter = () => {
                     </li>
                   ))}
                 </ul>
-
-                {/* Newsletter */}
-                <div className="pt-4">
-                  <h4 className="text-sm font-semibold uppercase tracking-wider mb-3">Newsletter</h4>
-                  <form className="flex" onSubmit={(e) => e.preventDefault()}>
-                    <input
-                      type="email"
-                      placeholder="Your email"
-                      className="flex-1 px-4 py-2 text-sm bg-background/10 border border-primary-foreground/20 rounded-l text-primary-foreground placeholder:text-primary-foreground/40 focus:outline-none focus:border-primary"
-                    />
-                    <button type="submit" className="bg-primary text-primary-foreground px-4 py-2 rounded-r text-sm font-semibold uppercase tracking-wider hover:opacity-90 transition-opacity">
-                      Join
-                    </button>
-                  </form>
-                </div>
               </div>
 
               {/* Column 4: Contact */}
@@ -96,11 +81,11 @@ const MegaFooter = () => {
                 <h3 className="text-lg font-semibold uppercase tracking-wider">Contact Us</h3>
                 <div className="space-y-4">
                   <a
-                    href="tel:+254700000000"
+                    href="tel:+254112471292"
                     className="flex items-center gap-3 text-sm opacity-70 hover:opacity-100 transition-opacity"
                   >
                     <Phone size={18} />
-                    +254 700 000 000
+                    +254 112 471 292
                   </a>
                   <a
                     href="mailto:info@matawidigital.com"
@@ -109,16 +94,18 @@ const MegaFooter = () => {
                     <Mail size={18} />
                     info@matawidigital.com
                   </a>
-                  <div className="flex items-start gap-3 text-sm opacity-70">
+                    <a
+                    href="https://maps.app.goo.gl/ywTQHmZaAe5ctTzq7"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-start gap-3 text-sm opacity-70 hover:opacity-100 transition-opacity"
+                    >
                     <MapPin size={18} className="flex-shrink-0 mt-0.5" />
                     <span>Ngong, Nairobi, Kenya</span>
-                  </div>
+                    </a>
                 </div>
 
-                {/* Google Maps placeholder */}
-                <div className="w-full h-48 bg-background/10 border border-primary-foreground/20 rounded flex items-center justify-center mt-4">
-                  <span className="text-xs opacity-40 uppercase tracking-wider">Google Maps Embed</span>
-                </div>
+              
               </div>
             </div>
           </div>
@@ -140,7 +127,7 @@ const MegaFooter = () => {
         <div className="border-t border-primary-foreground/10">
           <div className="container-narrow px-6 md:px-12 lg:px-24 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-xs opacity-40">
-              © {new Date().getFullYear()} Matawi Digital. All rights reserved.
+              © 2022 - {new Date().getFullYear()} Matawi Digital. All rights reserved.
             </p>
             <div className="flex gap-6">
               <Link to="/about" className="text-xs opacity-40 hover:opacity-70 transition-opacity">Privacy Policy</Link>
