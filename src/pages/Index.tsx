@@ -30,7 +30,7 @@ const Index = () => {
             name: "Matawi Digital",
             description: "IT infrastructure, management, and marketing company based in Kenya.",
             url: "https://matawidigital.com",
-            telephone: "+254700000000",
+            telephone: "+254112471292",
             email: "info@matawidigital.com",
             address: {
               "@type": "PostalAddress",
