@@ -191,7 +191,7 @@ const Contact = () => {
       <Header />
       <main className="section-padding bg-background">
         <div className="container-narrow">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div className="max-w-lg mx-auto">
             {/* Contact form */}
             <div className="space-y-6">
               <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-secondary">
@@ -284,38 +284,25 @@ const Contact = () => {
                       placeholder="Tell us about your project..."
                     />
                   </div>
-                  <button type="submit" disabled={isLoading} className="btn-primary disabled:opacity-50 disabled:cursor-not-allowed">
-                    {isLoading ? 'Sending...' : 'Send Message'}
-                  </button>
-                </form>
-            </div>
-
-            {/* Contact details */}
-            <div className="space-y-8">
-              <div className="mat-card space-y-6">
-                <h3 className="text-lg font-semibold">Contact Details</h3>
-                <div className="space-y-4">
-                  <a href="tel:+254112471292" className="flex items-center gap-4 text-sm text-muted-foreground hover:text-primary transition-colors">
-                    <div className="w-10 h-10 bg-primary/10 rounded flex items-center justify-center flex-shrink-0">
-                      <Phone size={18} className="text-primary" />
-                    </div>
-                    +254 112 471 292
-                  </a>
-                  <a href="mailto:info@matawidigital.com" className="flex items-center gap-4 text-sm text-muted-foreground hover:text-primary transition-colors">
-                    <div className="w-10 h-10 bg-primary/10 rounded flex items-center justify-center flex-shrink-0">
-                      <Mail size={18} className="text-primary" />
-                    </div>
-                    info@matawidigital.com
-                  </a>
-                  <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                    <div className="w-10 h-10 bg-primary/10 rounded flex items-center justify-center flex-shrink-0">
-                      <MapPin size={18} className="text-primary" />
-                    </div>
-                    Ngong, Nairobi, Kenya
+                  <div className="flex justify-center">
+                    <button type="submit" disabled={isLoading} className="btn-primary disabled:opacity-50 disabled:cursor-not-allowed">
+                      {isLoading ? 'Sending...' : 'Send Message'}
+                    </button>
                   </div>
-                </div>
-              </div>
-
+                  <div className="flex items-center justify-center gap-2 mt-4">
+                    <style>{`
+                      @keyframes blink-pulse {
+                        0%, 100% { opacity: 1; }
+                        50% { opacity: 0.4; }
+                      }
+                      .live-dot {
+                        animation: blink-pulse 1.5s ease-in-out infinite;
+                      }
+                    `}</style>
+                    <div className="w-2 h-2 bg-green-500 rounded-full live-dot"></div>
+                    <p className="text-xs text-muted-foreground">We're live and typically reply in minutes</p>
+                  </div>
+                </form>
             </div>
           </div>
         </div>

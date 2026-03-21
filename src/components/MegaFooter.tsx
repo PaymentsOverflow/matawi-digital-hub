@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin } from "lucide-react";
-import logo from "@/assets/matawi-digital-svg-long-header-transparent.svg";
+import longLogo from "@/assets/matawi-digital-only-transparent-svg.svg";
+import logo from "@/assets/matawi-digital-logo-transparent.png";
 
 /**
  * MegaFooter — Full viewport-height footer with comprehensive company info,
@@ -33,13 +34,19 @@ const MegaFooter = () => {
           <div className="container-narrow">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16">
               {/* Column 1: Company Info */}
-              <div className="space-y-6">
-                <img src={logo} alt="Matawi Digital" className="h-10 w-auto brightness-100" />
-                <p className="text-sm leading-relaxed opacity-70">
+              <div className="space-y-6 flex flex-col items-center">
+                <div className="h-12" />
+                <Link to="/">
+                  <img src={logo} alt="Matawi Digital" className="h-12 md:h-20 w-auto brightness-100 hover:brightness-110 transition-all cursor-pointer" />
+                </Link>
+                <Link to="/">
+                  <img src={longLogo} alt="Matawi Digital" className="h-16 md:h-24 w-auto brightness-100 hover:brightness-110 transition-all cursor-pointer" />
+                </Link>
+                {/* <p className="text-sm leading-relaxed opacity-70">
                   Matawi Digital is a leading IT infrastructure, management, and marketing company 
                   headquartered in Kenya. We deliver world-class technology solutions to businesses 
                   across the country, helping them thrive in the digital age.
-                </p>
+                </p> */}
               </div>
 
               {/* Column 2: Quick Links - hidden on mobile */}
@@ -77,9 +84,9 @@ const MegaFooter = () => {
               </div>
 
               {/* Column 4: Contact */}
-              <div className="space-y-6">
+              <div className="space-y-6 text-center md:text-left">
                 <h3 className="text-lg font-semibold uppercase tracking-wider">Contact Us</h3>
-                <div className="space-y-4">
+                <div className="space-y-4 flex flex-col md:items-start items-center">
                   <a
                     href="tel:+254112471292"
                     className="flex items-center gap-3 text-sm opacity-70 hover:opacity-100 transition-opacity"
@@ -88,7 +95,7 @@ const MegaFooter = () => {
                     +254 112 471 292
                   </a>
                   <a
-                    href="mailto:info@matawidigital.com"
+                    href="mailto:info@matawidigital.co.ke"
                     className="flex items-center gap-3 text-sm opacity-70 hover:opacity-100 transition-opacity"
                   >
                     <Mail size={18} />

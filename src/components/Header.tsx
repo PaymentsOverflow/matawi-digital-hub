@@ -30,7 +30,7 @@ const Header = () => {
       <div className="container-narrow flex items-center justify-between h-16 px-6 md:px-12 lg:px-24">
         {/* Logo */}
         <Link to="/" className="flex items-center">
-          <img src={logo} alt="Matawi Digital Logo" className="h-10 w-auto" />
+          <img src={logo} alt="Matawi Digital Logo" className="h-16 w-auto" />
         </Link>
 
         {/* Desktop Nav */}
