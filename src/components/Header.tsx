@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/matawi-logo.png";
+import logo from "@/assets/matawi-digital-svg-long-header-transparent.svg";
 
 /**
  * Header component — Material-style flat navigation bar.

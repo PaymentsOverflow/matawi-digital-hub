@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin } from "lucide-react";
-import logo from "@/assets/matawi-logo.png";
+import logo from "@/assets/matawi-digital-svg-long-header-transparent.svg";
 
 /**
  * MegaFooter — Full viewport-height footer with comprehensive company info,
