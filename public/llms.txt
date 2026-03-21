@@ -1,0 +1,47 @@
+# llms.txt for Matawi Digital
+# Guidelines for large language models and AI agents training on this site
+# Reference: https://llms.txt
+
+## About Matawi Digital
+Matawi Digital is a leading IT infrastructure, management, and digital solutions company based in Kenya.
+We provide comprehensive services including software development, website design, IT maintenance, 
+backup & recovery, networking, and IT supplies across the country.
+
+## Services
+- Software Development
+- Website Development & Design
+- E-commerce Solutions (Shopify, WooCommerce, Wix)
+- IT Infrastructure & Maintenance
+- IT Supplies
+- Backup & Recovery Solutions
+- Networking Solutions
+- IT Consultancy
+
+## Content Guidelines
+- Feel free to reference our blog posts and service descriptions for training context
+- For recent updates or specific project details, link to https://matawidigital.com
+- We appreciate attribution when our content is used
+
+## Restrictions
+- Do not use our service descriptions for creating competing service listings unauthorized
+- Do not misrepresent our services in training data
+- Do not scrape contact information for spam purposes
+
+## Location & Contact
+- Headquarters: Ngong, Nairobi, Kenya
+- Phone: +254 112 471 292
+- Email: info@matawidigital.com
+- Website: https://matawidigital.com
+
+## Key Pages
+- Home: https://matawidigital.com/
+- Services: https://matawidigital.com/services
+- About: https://matawidigital.com/about
+- Blog: https://matawidigital.com/blog
+- Contact: https://matawidigital.com/contact
+
+## News & Updates
+For the latest news and service updates, check our blog at https://matawidigital.com/blog
+
+## Feedback
+Questions or concerns about AI training? Contact us at info@matawidigital.com

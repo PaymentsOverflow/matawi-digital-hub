@@ -2,6 +2,8 @@ import { Helmet } from "react-helmet-async";
 import { useParams, Link } from "react-router-dom";
 import Header from "@/components/Header";
 import MegaFooter from "@/components/MegaFooter";
+import Schema from "@/components/Schema";
+import { generateServiceSchema, generateBreadcrumbSchema } from "@/utils/schemaGenerator";
 import { Code2, Globe, Monitor, Wrench, HardDrive, Network, CheckCircle2, ArrowLeft } from "lucide-react";
 import { servicesData } from "@/data/servicesData";
 
@@ -35,12 +37,28 @@ const ServiceDetail = () => {
 
   const Icon = iconMap[service.icon] || Code2;
 
+  const serviceSchema = generateServiceSchema(
+    service.title,
+    service.shortDescription,
+    `https://matawidigital.com/services/${service.slug}`,
+    "Kenya"
+  );
+
+  const breadcrumbs = generateBreadcrumbSchema([
+    { name: "Home", url: "https://matawidigital.com" },
+    { name: "Services", url: "https://matawidigital.com/services" },
+    { name: service.title, url: `https://matawidigital.com/services/${service.slug}` }
+  ]);
+
   return (
     <>
       <Helmet>
         <title>{service.title} — Matawi Digital | IT Services in Kenya</title>
         <meta name="description" content={service.shortDescription} />
       </Helmet>
+
+      <Schema schema={serviceSchema} />
+      <Schema schema={breadcrumbs} />
 
       <Header />
       <main>

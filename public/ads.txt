@@ -1,0 +1,21 @@
+# ads.txt for Matawi Digital
+# Authorized Digital Sellers for Advertising
+# Reference: https://iabtechlab.com/ads-txt
+
+# Format: [Exchange Domain], [Seller Account ID], [Account Type], [Certification Authority ID]
+
+# If using Google Ad Manager (Recommended):
+# google.com, [YOUR_PUBLISHER_ID], DIRECT, f08c47fec0942fa0
+
+# If using other ad networks, add them here:
+# Example (Facebook):
+# facebook.com, [YOUR_ACCOUNT_ID], DIRECT, [CERT_ID]
+
+# If you're not currently serving ads, you can still have this file
+# to prevent unauthorized ad selling on your domain
+
+# To prevent unauthorized ad selling:
+# Uncomment the line below (note the # at the start means it doesn't apply to authorized sellers)
+
+# This file helps prevent domain spoofing and ensures ads come from authorized sources.
+# Contact your ad network for your specific Publisher ID and Certification Authority ID.

@@ -2,6 +2,8 @@ import { Helmet } from "react-helmet-async";
 import { useParams, Link } from "react-router-dom";
 import Header from "@/components/Header";
 import MegaFooter from "@/components/MegaFooter";
+import Schema from "@/components/Schema";
+import { generateBlogPostSchema, generateBreadcrumbSchema } from "@/utils/schemaGenerator";
 import { blogPosts } from "@/data/blogPosts";
 import { CalendarDays, ArrowLeft, User } from "lucide-react";
 
@@ -30,12 +32,32 @@ const BlogPost = () => {
     );
   }
 
+  const blogSchema = generateBlogPostSchema(
+    post.title,
+    post.content.substring(0, 155),
+    post.heroImage,
+    post.publishedDate || new Date().toISOString(),
+    new Date().toISOString(),
+    "Matawi Digital",
+    `https://matawidigital.com/blog/${post.slug}`
+  );
+
+  const breadcrumbs = generateBreadcrumbSchema([
+    { name: "Home", url: "https://matawidigital.com" },
+    { name: "Blog", url: "https://matawidigital.com/blog" },
+    { name: post.title, url: `https://matawidigital.com/blog/${post.slug}` }
+  ]);
+
   return (
     <>
       <Helmet>
         <title>{post.title} — Matawi Digital Blog</title>
         <meta name="description" content={post.content.substring(0, 155)} />
         <meta property="og:title" content={post.title} />
+      </Helmet>
+
+      <Schema schema={blogSchema} />
+      <Schema schema={breadcrumbs} />
         <meta property="og:description" content={post.content.substring(0, 155)} />
         <meta property="og:image" content={post.heroImage} />
         <meta property="og:type" content="article" />

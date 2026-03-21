@@ -1,0 +1,29 @@
+/* humans.txt for Matawi Digital
+   This file is about the people behind Matawi Digital
+   Learn more at https://humanstxt.org
+*/
+
+/* TEAM */
+Team: Matawi Digital
+Site: https://matawidigital.com
+Twitter: @matawidigital (if applicable)
+Location: Ngong, Nairobi, Kenya
+
+/* THANKS */
+Thanks to everyone who believes in digital transformation
+and helps businesses thrive through technology solutions.
+
+/* SITE */
+Language: English
+Standards: HTML5, CSS3, JavaScript (React)
+Framework: React with TypeScript
+CMS: Vite
+IDE: VS Code
+Built with: React, TypeScript, Tailwind CSS, shadcn/ui
+Database: PostgreSQL (backend)
+Hosting: Vercel / Netlify (frontend)
+
+/* CONTACT */
+Email: info@matawidigital.com
+Phone: +254 112 471 292
+WhatsApp: +254 112 471 292

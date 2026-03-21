@@ -5,11 +5,18 @@ import ServicesSection from "@/components/ServicesSection";
 import BrandsSection from "@/components/BrandsSection";
 import MegaFooter from "@/components/MegaFooter";
 import AnnouncementBar from "@/components/AnnouncementBar";
+import Schema from "@/components/Schema";
+import { generateOrganizationSchema, generateBreadcrumbSchema } from "@/utils/schemaGenerator";
 
 /**
  * Home Page — Main landing page for Matawi Digital.
  */
 const Index = () => {
+  const orgSchema = generateOrganizationSchema();
+  const breadcrumbs = generateBreadcrumbSchema([
+    { name: "Home", url: "https://matawidigital.com" }
+  ]);
+
   return (
     <>
       <Helmet>
@@ -23,29 +30,10 @@ const Index = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://matawidigital.com" />
         <link rel="canonical" href="https://matawidigital.com" />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            name: "Matawi Digital",
-            description: "IT infrastructure, management, and marketing company based in Kenya.",
-            url: "https://matawidigital.com",
-            telephone: "+254112471292",
-            email: "info@matawidigital.com",
-            address: {
-              "@type": "PostalAddress",
-              addressLocality: "Ngong",
-              addressRegion: "Nairobi",
-              addressCountry: "KE",
-            },
-            areaServed: ["Ngong", "Nairobi", "Karen", "Thika", "Machakos", "Kitengela", "Kenya"],
-            serviceType: [
-              "Software Development", "Website Design", "IT Supplies",
-              "IT Maintenance", "Backup and Recovery", "Networking"
-            ],
-          })}
-        </script>
       </Helmet>
+
+      <Schema schema={orgSchema} />
+      <Schema schema={breadcrumbs} />
 
       <AnnouncementBar />
       <Header />
