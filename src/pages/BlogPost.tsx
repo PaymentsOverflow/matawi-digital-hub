@@ -54,7 +54,6 @@ const BlogPost = () => {
         <title>{post.title} — Matawi Digital Blog</title>
         <meta name="description" content={post.content.substring(0, 155)} />
         <meta property="og:title" content={post.title} />
-      </Helmet>
 
       <Schema schema={blogSchema} />
       <Schema schema={breadcrumbs} />
