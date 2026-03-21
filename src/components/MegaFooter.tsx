@@ -9,12 +9,12 @@ import logo from "@/assets/matawi-logo.png";
  */
 
 const quickLinks = [
-  { label: "Software Development", path: "/#services" },
-  { label: "Websites", path: "/#services" },
-  { label: "IT Supplies", path: "/#services" },
-  { label: "IT Maintenance", path: "/#services" },
-  { label: "Backup & Recovery", path: "/#services" },
-  { label: "Networking", path: "/#services" },
+  { label: "Software Development", path: "/services/software-development" },
+  { label: "Websites", path: "/services/websites" },
+  { label: "IT Supplies", path: "/services/it-supplies" },
+  { label: "IT Maintenance", path: "/services/it-maintenance" },
+  { label: "Backup & Recovery", path: "/services/backup-and-recovery" },
+  { label: "Networking", path: "/services/networking" },
 ];
 
 const companyLinks = [
@@ -38,7 +38,7 @@ const MegaFooter = () => {
                 <p className="text-sm leading-relaxed opacity-70">
                   Matawi Digital is a leading IT infrastructure, management, and marketing company 
                   headquartered in Kenya. We deliver world-class technology solutions to businesses 
-                  across Nairobi, Ngong, Karen, Thika, Machakos, Kitengela, and country-wide.
+                  across the country, helping them thrive in the digital age.
                 </p>
               </div>
 
@@ -117,8 +117,8 @@ const MegaFooter = () => {
             <p className="text-xs opacity-40 leading-relaxed text-center">
               Matawi Digital provides IT infrastructure solutions, software development, website design,
               IT supplies, maintenance, backup and recovery, and networking services across Kenya.
-              Proudly serving businesses in Ngong, Nairobi, Karen, Thika, Machakos, Kitengela,
-              and country-wide in Kenya. Your trusted technology partner for digital transformation.
+            <br />
+            Your trusted technology partner for digital transformation.
             </p>
           </div>
         </div>
