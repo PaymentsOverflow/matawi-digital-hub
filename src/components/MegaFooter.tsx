@@ -99,7 +99,7 @@ const MegaFooter = () => {
                     className="flex items-center gap-3 text-sm opacity-70 hover:opacity-100 transition-opacity"
                   >
                     <Mail size={18} />
-                    info@matawidigital.com
+                    info@matawidigital.co.ke
                   </a>
                     <a
                     href="https://maps.app.goo.gl/ywTQHmZaAe5ctTzq7"
