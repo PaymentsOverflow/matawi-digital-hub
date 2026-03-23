@@ -95,11 +95,11 @@ const MegaFooter = () => {
                     +254 112 471 292
                   </a>
                   <a
-                    href="mailto:info@matawidigital.co.ke"
+                    href="mailto:wave@matawidigital.co.ke"
                     className="flex items-center gap-3 text-sm opacity-70 hover:opacity-100 transition-opacity"
                   >
                     <Mail size={18} />
-                    info@matawidigital.co.ke
+                    wave@matawidigital.co.ke
                   </a>
                     <a
                     href="https://maps.app.goo.gl/ywTQHmZaAe5ctTzq7"
