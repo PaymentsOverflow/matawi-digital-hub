@@ -97,12 +97,7 @@ const MegaFooter = () => {
                     +254 112 471 292
                   </a>
                   <a
-<<<<<<< HEAD
-                    href="mailto:info@matawidigital.co.ke"
-                    onClick={() => trackButtonClick("info@matawidigital.com", "Footer Email")}
-=======
                     href="mailto:wave@matawidigital.co.ke"
->>>>>>> 27c4adc6869e9a1ce45de84e36c99a2a43dce421
                     className="flex items-center gap-3 text-sm opacity-70 hover:opacity-100 transition-opacity"
                   >
                     <Mail size={18} />
