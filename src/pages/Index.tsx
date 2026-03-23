@@ -14,7 +14,7 @@ import { generateOrganizationSchema, generateBreadcrumbSchema } from "@/utils/sc
 const Index = () => {
   const orgSchema = generateOrganizationSchema();
   const breadcrumbs = generateBreadcrumbSchema([
-    { name: "Home", url: "https://matawidigital.com" }
+    { name: "Home", url: "https://matawidigital.co.ke" }
   ]);
 
   return (
@@ -28,8 +28,8 @@ const Index = () => {
         <meta property="og:title" content="Matawi Digital — IT Infrastructure & Digital Solutions in Kenya" />
         <meta property="og:description" content="End-to-end IT solutions for businesses across Kenya. Software development, websites, IT supplies, maintenance, backup, and networking." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://matawidigital.com" />
-        <link rel="canonical" href="https://matawidigital.com" />
+        <meta property="og:url" content="https://matawidigital.co.ke" />
+        <link rel="canonical" href="https://matawidigital.co.ke" />
       </Helmet>
 
       <Schema schema={orgSchema} />
