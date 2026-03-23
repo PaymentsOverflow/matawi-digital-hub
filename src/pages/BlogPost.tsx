@@ -55,13 +55,13 @@ const BlogPost = () => {
         <title>{post.title} — Matawi Digital Blog</title>
         <meta name="description" content={post.content.substring(0, 155)} />
         <meta property="og:title" content={post.title} />
-
-      <Schema schema={blogSchema} />
-      <Schema schema={breadcrumbs} />
         <meta property="og:description" content={post.content.substring(0, 155)} />
         <meta property="og:image" content={post.heroImage} />
         <meta property="og:type" content="article" />
       </Helmet>
+
+      <Schema schema={blogSchema} />
+      <Schema schema={breadcrumbs} />
 
       <Header />
       <main className="section-padding bg-background">

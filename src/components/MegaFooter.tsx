@@ -111,7 +111,7 @@ const MegaFooter = () => {
                     className="flex items-start gap-3 text-sm opacity-70 hover:opacity-100 transition-opacity"
                     >
                     <MapPin size={18} className="flex-shrink-0 mt-0.5" />
-                    <span>Ngong, Nairobi, Kenya</span>
+                    <span>Ngong, Nairobi, Kenya </span>
                     </a>
                 </div>
 
