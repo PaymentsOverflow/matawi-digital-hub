@@ -5,25 +5,16 @@
 
 /* TEAM */
 Team: Matawi Digital
-Site: https://matawidigital.com
-Twitter: @matawidigital (if applicable)
+Site: https://matawidigital.co.ke
+Twitter: @matawidigital
+Instagram: @matawidigital
 Location: Ngong, Nairobi, Kenya
 
 /* THANKS */
 Thanks to everyone who believes in digital transformation
 and helps businesses thrive through technology solutions.
 
-/* SITE */
-Language: English
-Standards: HTML5, CSS3, JavaScript (React)
-Framework: React with TypeScript
-CMS: Vite
-IDE: VS Code
-Built with: React, TypeScript, Tailwind CSS, shadcn/ui
-Database: PostgreSQL (backend)
-Hosting: Vercel / Netlify (frontend)
-
 /* CONTACT */
-Email: info@matawidigital.com
+Email: build@matawidigital.co.ke
 Phone: +254 112 471 292
 WhatsApp: +254 112 471 292
