@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import MegaFooter from "@/components/MegaFooter";
+import { trackServiceClick } from "@/services/analytics";
 import { Code2, Globe, Monitor, Wrench, HardDrive, Network, ArrowRight } from "lucide-react";
 import { servicesData } from "@/data/servicesData";
 
@@ -48,6 +49,7 @@ const Services = () => {
                   <Link
                     key={service.slug}
                     to={`/services/${service.slug}`}
+                    onClick={() => trackServiceClick(service.title, service.slug)}
                     className="mat-card group block text-center"
                     style={{ animationDelay: `${index * 100}ms` }}
                   >

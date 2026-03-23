@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import MegaFooter from "@/components/MegaFooter";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
+import { trackFormSubmission, trackContactFormInteraction } from "@/services/analytics";
 
 /**
  * Contact Page — Contact form and company contact details.
@@ -124,6 +125,11 @@ const Contact = () => {
       ...prev,
       [name]: value,
     }));
+    
+    // Track form field interactions
+    if (value && !formData[name as keyof typeof formData]) {
+      trackContactFormInteraction("field_filled", name);
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -150,6 +156,7 @@ const Contact = () => {
       const telegramSuccess = await sendToTelegram(clientIP);
       
       if (telegramSuccess) {
+        trackFormSubmission("contact-form");
         toast({
           title: "Message Sent Successfully!",
           description: "We'll get back to you in a few minutes, our promise."

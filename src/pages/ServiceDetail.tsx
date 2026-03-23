@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import MegaFooter from "@/components/MegaFooter";
 import Schema from "@/components/Schema";
 import { generateServiceSchema, generateBreadcrumbSchema } from "@/utils/schemaGenerator";
+import { trackCTA } from "@/services/analytics";
 import { Code2, Globe, Monitor, Wrench, HardDrive, Network, CheckCircle2, ArrowLeft } from "lucide-react";
 import { servicesData } from "@/data/servicesData";
 
@@ -94,7 +95,11 @@ const ServiceDetail = () => {
               ))}
             </div>
             <div className="text-center mt-16">
-              <Link to="/contact" className="btn-primary">
+              <Link 
+                to="/contact" 
+                onClick={() => trackCTA("Get a Quote", "primary-button", `Service: ${service.title}`)}
+                className="btn-primary"
+              >
                 Get a Quote
               </Link>
             </div>

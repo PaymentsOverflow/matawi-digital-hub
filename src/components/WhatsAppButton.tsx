@@ -1,4 +1,5 @@
 import { MessageCircle } from "lucide-react";
+import { trackButtonClick } from "@/services/analytics";
 
 /**
  * WhatsApp Button — Modern floating button in bottom-right corner
@@ -9,6 +10,10 @@ const WhatsAppButton = () => {
   const whatsappNumber = "254112471292"; // Kenya country code
   const whatsappMessage = "Hello! I want to partner with you on a project.";
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+  const handleWhatsAppClick = () => {
+    trackButtonClick("WhatsApp", "Floating Button");
+  };
 
   return (
     <>
@@ -25,6 +30,7 @@ const WhatsAppButton = () => {
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={handleWhatsAppClick}
         className="fixed bottom-6 right-6 z-40 bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-lg transition-all duration-300 hover:scale-110 hover:shadow-xl whatsapp-blink"
         aria-label="Chat on WhatsApp"
       >

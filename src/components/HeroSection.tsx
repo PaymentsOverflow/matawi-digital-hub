@@ -1,9 +1,19 @@
 import { Link } from "react-router-dom";
+import { trackCTA, trackButtonClick } from "@/services/analytics";
 
 /**
  * HeroSection — Centered bold hero with a strong value proposition.
  */
 const HeroSection = () => {
+  const handleGetStarted = () => {
+    trackCTA("Get Started", "primary-button", "Hero Section");
+    trackButtonClick("Get Started", "Hero CTA");
+  };
+
+  const handleOurServices = () => {
+    trackCTA("Our Services", "secondary-button", "Hero Section");
+    trackButtonClick("Our Services", "Hero CTA");
+  };
   return (
     <section className="section-padding bg-background">
       <div className="container-narrow">
@@ -28,10 +38,10 @@ const HeroSection = () => {
 
           {/* CTA buttons */}
           <div className="flex flex-wrap justify-center gap-4 pt-4">
-            <Link to="/contact" className="btn-primary">
+            <Link to="/contact" onClick={handleGetStarted} className="btn-primary">
               Get Started
             </Link>
-            <Link to="/services" className="btn-outline-primary">
+            <Link to="/services" onClick={handleOurServices} className="btn-outline-primary">
               Our Services
             </Link>
           </div>

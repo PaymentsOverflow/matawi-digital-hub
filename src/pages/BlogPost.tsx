@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import MegaFooter from "@/components/MegaFooter";
 import Schema from "@/components/Schema";
 import { generateBlogPostSchema, generateBreadcrumbSchema } from "@/utils/schemaGenerator";
+import { trackButtonClick } from "@/services/analytics";
 import { blogPosts } from "@/data/blogPosts";
 import { CalendarDays, ArrowLeft, User } from "lucide-react";
 
@@ -36,7 +37,7 @@ const BlogPost = () => {
     post.title,
     post.content.substring(0, 155),
     post.heroImage,
-    post.publishedDate || new Date().toISOString(),
+    new Date(post.date).toISOString(),
     new Date().toISOString(),
     "Matawi Digital",
     `https://matawidigital.com/blog/${post.slug}`
@@ -68,6 +69,7 @@ const BlogPost = () => {
           {/* Back link */}
           <Link
             to="/blog"
+            onClick={() => trackButtonClick("Back to Blog", "Blog Post Navigation")}
             className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors mb-8"
           >
             <ArrowLeft size={16} /> Back to Blog

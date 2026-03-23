@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/matawi-digital-svg-long-header-transparent.svg";
+import { trackButtonClick } from "@/services/analytics";
 
 /**
  * Header component — Material-style flat navigation bar.
@@ -39,6 +40,7 @@ const Header = () => {
             <Link
               key={link.path}
               to={link.path}
+              onClick={() => trackButtonClick(link.label, "Header Navigation")}
               className={`text-sm font-medium uppercase tracking-wider transition-colors hover:text-primary ${
                 isActive(link.path) ? "text-primary" : "text-muted-foreground"
               }`}
@@ -46,7 +48,11 @@ const Header = () => {
               {link.label}
             </Link>
           ))}
-          <Link to="/contact" className="btn-primary text-xs py-2 px-6">
+          <Link 
+            to="/contact" 
+            onClick={() => trackButtonClick("Get a Quote", "Header CTA")}
+            className="btn-primary text-xs py-2 px-6"
+          >
             Get a Quote
           </Link>
         </nav>
@@ -68,7 +74,10 @@ const Header = () => {
             <Link
               key={link.path}
               to={link.path}
-              onClick={() => setMobileOpen(false)}
+              onClick={() => {
+                trackButtonClick(link.label, "Mobile Navigation");
+                setMobileOpen(false);
+              }}
               className={`block text-sm font-medium uppercase tracking-wider ${
                 isActive(link.path) ? "text-primary" : "text-muted-foreground"
               }`}
@@ -78,7 +87,10 @@ const Header = () => {
           ))}
           <Link
             to="/contact"
-            onClick={() => setMobileOpen(false)}
+            onClick={() => {
+              trackButtonClick("Get a Quote", "Mobile CTA");
+              setMobileOpen(false);
+            }}
             className="btn-primary inline-block text-xs py-2 px-6"
           >
             Get a Quote

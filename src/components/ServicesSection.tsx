@@ -8,6 +8,7 @@ import {
   Network,
   ArrowRight,
 } from "lucide-react";
+import { trackServiceClick } from "@/services/analytics";
 import { servicesData } from "@/data/servicesData";
 
 const iconMap: Record<string, React.ElementType> = {
@@ -42,6 +43,7 @@ const ServicesSection = () => {
               <Link
                 key={service.slug}
                 to={`/services/${service.slug}`}
+                onClick={() => trackServiceClick(service.title, service.slug)}
                 className="mat-card group block text-center"
                 style={{ animationDelay: `${index * 100}ms` }}
               >

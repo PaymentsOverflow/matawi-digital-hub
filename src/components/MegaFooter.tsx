@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin } from "lucide-react";
+import { trackButtonClick, trackExternalLinkClick } from "@/services/analytics";
 import longLogo from "@/assets/matawi-digital-only-transparent-svg.svg";
 import logo from "@/assets/matawi-digital-logo-transparent.png";
 
@@ -89,6 +90,7 @@ const MegaFooter = () => {
                 <div className="space-y-4 flex flex-col md:items-start items-center">
                   <a
                     href="tel:+254112471292"
+                    onClick={() => trackButtonClick("+254 112 471 292", "Footer Phone")}
                     className="flex items-center gap-3 text-sm opacity-70 hover:opacity-100 transition-opacity"
                   >
                     <Phone size={18} />
@@ -96,6 +98,7 @@ const MegaFooter = () => {
                   </a>
                   <a
                     href="mailto:info@matawidigital.co.ke"
+                    onClick={() => trackButtonClick("info@matawidigital.com", "Footer Email")}
                     className="flex items-center gap-3 text-sm opacity-70 hover:opacity-100 transition-opacity"
                   >
                     <Mail size={18} />
@@ -105,6 +108,7 @@ const MegaFooter = () => {
                     href="https://maps.app.goo.gl/ywTQHmZaAe5ctTzq7"
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() => trackExternalLinkClick("https://maps.app.goo.gl/ywTQHmZaAe5ctTzq7", "Google Maps")}
                     className="flex items-start gap-3 text-sm opacity-70 hover:opacity-100 transition-opacity"
                     >
                     <MapPin size={18} className="flex-shrink-0 mt-0.5" />
@@ -137,8 +141,8 @@ const MegaFooter = () => {
               © 2022 - {new Date().getFullYear()} Matawi Digital. All rights reserved.
             </p>
             <div className="flex gap-6">
-              <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-xs opacity-40 hover:opacity-70 transition-opacity">Google Privacy Policy</a>
-              <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="text-xs opacity-40 hover:opacity-70 transition-opacity">Google Terms of Service</a>
+              <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" onClick={() => trackExternalLinkClick("https://policies.google.com/privacy", "Google Privacy Policy")} className="text-xs opacity-40 hover:opacity-70 transition-opacity">Google Privacy Policy</a>
+              <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" onClick={() => trackExternalLinkClick("https://policies.google.com/terms", "Google Terms of Service")} className="text-xs opacity-40 hover:opacity-70 transition-opacity">Google Terms of Service</a>
             </div>
           </div>
         </div>

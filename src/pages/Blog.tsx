@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import MegaFooter from "@/components/MegaFooter";
+import { trackBlogPostView } from "@/services/analytics";
 import { blogPosts } from "@/data/blogPosts";
 import { CalendarDays, ArrowRight } from "lucide-react";
 
@@ -37,6 +38,7 @@ const Blog = () => {
               <Link
                 key={post.id}
                 to={`/blog/${post.slug}`}
+                onClick={() => trackBlogPostView(post.title, post.slug)}
                 className="mat-card group block"
               >
                 {/* Hero image */}
